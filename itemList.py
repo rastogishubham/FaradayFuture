@@ -7,6 +7,9 @@ class ItemList:
         self.item_list = []
         self.item_list = items_to_store
 
+    def __len__(self):
+        return len(self.item_list)
+
     def get_unique_items(self):
         return list(set(self.item_list))
 
