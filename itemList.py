@@ -10,7 +10,7 @@ class ItemList:
     def get_unique_items(self):
         return list(set(self.item_list))
 
-    def get_item_frequency(self):
+    def get_item_and_frequency(self):
         frequency_dictionary = {}
         for item in self.item_list:
             if item not in frequency_dictionary:
@@ -20,8 +20,14 @@ class ItemList:
 
         return frequency_dictionary
 
-    def append_to_list(self, item):
-        self.item_list.append(item)
+    def append_to_list(self, items):
+        if type(items) is list:
+            self.item_list.extend(items)
+        else:
+            self.item_list.append(items)
 
-    def inset_in_list(self, item, index):
-        self.item_list.insert(index, item)
+    def insert_in_list(self, items, index):
+        if type(items) is list:
+            self.item_list[index:index] = items
+        else:
+            self.item_list.insert(index, items)
