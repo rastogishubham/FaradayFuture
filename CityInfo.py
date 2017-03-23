@@ -2,17 +2,17 @@
 
 # Form implementation generated from reading ui file 'CityInfo.ui'
 #
-# Created: Wed Mar 22 22:51:46 2017
+# Created: Thu Mar 23 19:36:54 2017
 #      by: PyQt4 UI code generator 4.6.2
 #
 # WARNING! All changes made in this file will be lost!
 
-from PySide import QtCore, QtGui
+from PyQt4 import QtCore, QtGui
 
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(534, 235)
+        Dialog.resize(508, 346)
         self.label_city = QtGui.QLabel(Dialog)
         self.label_city.setGeometry(QtCore.QRect(20, 30, 62, 21))
         self.label_city.setObjectName("label_city")
@@ -37,6 +37,15 @@ class Ui_Dialog(object):
         self.text_long = QtGui.QTextEdit(Dialog)
         self.text_long.setGeometry(QtCore.QRect(100, 170, 371, 31))
         self.text_long.setObjectName("text_long")
+        self.label_long_2 = QtGui.QLabel(Dialog)
+        self.label_long_2.setGeometry(QtCore.QRect(20, 230, 62, 17))
+        self.label_long_2.setObjectName("label_long_2")
+        self.text_Filename = QtGui.QTextEdit(Dialog)
+        self.text_Filename.setGeometry(QtCore.QRect(100, 220, 241, 31))
+        self.text_Filename.setObjectName("text_Filename")
+        self.pushButton = QtGui.QPushButton(Dialog)
+        self.pushButton.setGeometry(QtCore.QRect(360, 220, 111, 31))
+        self.pushButton.setObjectName("pushButton")
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
@@ -47,4 +56,6 @@ class Ui_Dialog(object):
         self.label_county.setText(QtGui.QApplication.translate("Dialog", "County", None, QtGui.QApplication.UnicodeUTF8))
         self.label_lat.setText(QtGui.QApplication.translate("Dialog", "Latitude", None, QtGui.QApplication.UnicodeUTF8))
         self.label_long.setText(QtGui.QApplication.translate("Dialog", "Longitude", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_long_2.setText(QtGui.QApplication.translate("Dialog", "File name", None, QtGui.QApplication.UnicodeUTF8))
+        self.pushButton.setText(QtGui.QApplication.translate("Dialog", "Load JSON File", None, QtGui.QApplication.UnicodeUTF8))
 
