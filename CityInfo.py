@@ -7,7 +7,7 @@
 #
 # WARNING! All changes made in this file will be lost!
 
-from PyQt4 import QtCore, QtGui
+from PySide import QtCore, QtGui
 
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
@@ -46,9 +46,9 @@ class Ui_Dialog(object):
         self.label_error = QtGui.QLabel(Dialog)
         self.label_error.setGeometry(QtCore.QRect(100, 270, 291, 51))
         self.label_error.setObjectName("label_error")
-        self.lineEdit = QtGui.QLineEdit(Dialog)
-        self.lineEdit.setGeometry(QtCore.QRect(100, 220, 251, 31))
-        self.lineEdit.setObjectName("lineEdit")
+        self.text_Filename = QtGui.QLineEdit(Dialog)
+        self.text_Filename.setGeometry(QtCore.QRect(100, 220, 251, 31))
+        self.text_Filename.setObjectName("text_Filename")
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
