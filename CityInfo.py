@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'CityInfo.ui'
 #
-# Created: Thu Mar 23 19:36:54 2017
+# Created: Thu Mar 23 22:47:44 2017
 #      by: PyQt4 UI code generator 4.6.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -40,12 +40,15 @@ class Ui_Dialog(object):
         self.label_long_2 = QtGui.QLabel(Dialog)
         self.label_long_2.setGeometry(QtCore.QRect(20, 230, 62, 17))
         self.label_long_2.setObjectName("label_long_2")
-        self.text_Filename = QtGui.QTextEdit(Dialog)
-        self.text_Filename.setGeometry(QtCore.QRect(100, 220, 241, 31))
-        self.text_Filename.setObjectName("text_Filename")
         self.pushButton = QtGui.QPushButton(Dialog)
         self.pushButton.setGeometry(QtCore.QRect(360, 220, 111, 31))
         self.pushButton.setObjectName("pushButton")
+        self.label_error = QtGui.QLabel(Dialog)
+        self.label_error.setGeometry(QtCore.QRect(100, 270, 291, 51))
+        self.label_error.setObjectName("label_error")
+        self.lineEdit = QtGui.QLineEdit(Dialog)
+        self.lineEdit.setGeometry(QtCore.QRect(100, 220, 251, 31))
+        self.lineEdit.setObjectName("lineEdit")
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
