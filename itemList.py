@@ -1,7 +1,7 @@
 #!/usr/bin/env python2.7
 
 
-class ItemList:
+class itemList:
 
     # Initialization of class
     def __init__(self, items_to_store):
@@ -41,7 +41,7 @@ class ItemList:
             self.item_list.insert(index, items)
 
 if __name__ == "__main__":
-    newList = ItemList([1, 2, 3])
+    newList = itemList([1, 2, 3])
     print "List after initial initialization:"
     print newList.item_list
     newList.append_to_list(3)
