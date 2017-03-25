@@ -70,8 +70,8 @@ if __name__ == "__main__":
     print "Test case: find minimum of 4, 3, 5"
     print "Minimum is:"
     print find_minimum(4, 3, 5)
-    print ""
-    print ""
+    print ''
+    print ''
     print "Testing Question 5:"
     print "Test case 1: apply_operation(2, 3, '+')"
     print apply_operation(2, 3, '+')
