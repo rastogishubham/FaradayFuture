@@ -1,3 +1,5 @@
+#!/usr/bin/env python2.7
+
 import json
 import re
 import sys
@@ -32,12 +34,13 @@ class City(QMainWindow, Ui_Dialog):
     def load_from_file(self):
         file_pattern = r'.+\.json$'  # simple regex to check whether the input file is of type .json
         filename = self.text_Filename.text()
-        # Error checking to make sure that the file inputted by the user exists
-        if not os.path.isfile(filename):
-            self.label_error.setText('Error: Input file not found')
+
         # Error checking to make sure filename given by user is of type .json
-        elif not re.match(file_pattern, filename):
+        if not re.match(file_pattern, filename):
             self.label_error.setText('Error: Input file not of type .json')
+        # Error checking to make sure that the file inputted by the user exists
+        elif not os.path.isfile(filename):
+            self.label_error.setText('Error: Input file not found')
         # File is found and is of type .json, parse JSON objects and load them into a dictionary
         else:
             with open(filename, 'r') as file_pointer:
