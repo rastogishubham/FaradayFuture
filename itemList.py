@@ -1,7 +1,8 @@
 #!/usr/bin/env python2.7
+import collections
 
 
-class itemList:
+class ItemList:
 
     # Initialization of class
     def __init__(self, items_to_store):
@@ -16,15 +17,7 @@ class itemList:
 
     # Function to get the items and their frequencies from the list
     def get_item_and_frequency(self):
-        frequency_dictionary = {}  # Dictionary with key: item in list and value: Frequency of that item
-
-        for item in self.item_list:
-            if item not in frequency_dictionary:
-                frequency_dictionary[item] = 1
-            else:
-                frequency_dictionary[item] += 1
-
-        return frequency_dictionary
+        return dict(collections.Counter(self.item_list))
 
     # Function to append a list of items or an item to the list
     def append_to_list(self, items):
@@ -41,7 +34,7 @@ class itemList:
             self.item_list.insert(index, items)
 
 if __name__ == "__main__":
-    newList = itemList([1, 2, 3])
+    newList = ItemList([1, 2, 3])
     print "List after initial initialization:"
     print newList.item_list
     newList.append_to_list(3)
